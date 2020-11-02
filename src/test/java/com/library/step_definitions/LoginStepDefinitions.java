@@ -13,7 +13,7 @@ public class LoginStepDefinitions {
 
     @Given("user is on the login page")
     public void user_is_on_the_login_page() throws InterruptedException {
-        Driver.getDriver().get(ConfigurationReader.getProperty("urllibrary"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
         Thread.sleep(3000);
 
     }
