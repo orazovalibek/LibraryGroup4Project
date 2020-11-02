@@ -29,8 +29,7 @@ public class LoginStepDefinitions {
 
         String actualTitle=Driver.getDriver().getTitle();
 
-
-        Assert.assertTrue("Verification Failed",actualTitle.equalsIgnoreCase("Library"));
+        Assert.assertTrue("Verification Failed",actualTitle.equalsIgnoreCase("Login - Library"));
         Driver.getDriver().close();
 
 
