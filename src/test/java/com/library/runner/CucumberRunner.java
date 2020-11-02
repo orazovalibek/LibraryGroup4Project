@@ -9,7 +9,7 @@ import java.nio.file.Path;
 @CucumberOptions(
         features = "src/test/resources/features",
         glue = "src/test/java/com/library/step_definitions",
-        dryRun = true
+        dryRun = false
 
 
 )
