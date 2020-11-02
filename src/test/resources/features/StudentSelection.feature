@@ -6,3 +6,4 @@ Feature:Select a student
     And I click on "Users" link.
     When I click on "User Group" drop down menu.
     Then I should be able to click on "Students" selection.
+    #comment
