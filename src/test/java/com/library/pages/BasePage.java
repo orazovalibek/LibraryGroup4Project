@@ -1,10 +1,14 @@
 package com.library.pages;
 
-public abstract class BasePage {
+import com.library.utilities.Driver;
+import org.openqa.selenium.support.PageFactory;
 
-        public BasePage(){
+public class BasePage {
 
-        }
+    public BasePage(){
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+
 
 
 }
