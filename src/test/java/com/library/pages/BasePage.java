@@ -1,4 +1,10 @@
 package com.library.pages;
 
-public class BasePage {
+public abstract class BasePage {
+
+        public BasePage(){
+
+        }
+
+
 }
