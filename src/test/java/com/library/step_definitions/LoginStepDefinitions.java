@@ -31,7 +31,7 @@ public class LoginStepDefinitions {
 
 
         Assert.assertTrue("Verification Failed",actualTitle.equalsIgnoreCase("Library"));
-        //Driver.getDriver().close();
+        Driver.getDriver().close();
 
 
     }
