@@ -19,7 +19,8 @@ public class LoginStepDefinitions {
     }
 
     @When("user logs in as a librarian")
-    public void user_logs_in_as_a_librarian() {
+    public void user_logs_in_as_a_librarian() throws InterruptedException {
+        Thread.sleep(3000);
         loginPage.login();
 
     }
