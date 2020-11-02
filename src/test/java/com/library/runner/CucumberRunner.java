@@ -8,8 +8,8 @@ import java.nio.file.Path;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = "src/test/java/com/library/step_definitions",
-        dryRun = true
+        glue = "com/library/step_definitions",
+        dryRun = false
 
 
 )
