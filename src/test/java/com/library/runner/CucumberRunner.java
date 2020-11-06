@@ -10,8 +10,9 @@ import java.nio.file.Path;
         features = "src/test/resources/features",
         glue = "com/library/step_definitions",
         dryRun = false,
-        tags = "@student",
+        tags = "@login or @inactive",
         publish=true
+
 
 
 )
