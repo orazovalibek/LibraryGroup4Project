@@ -1,6 +1,7 @@
 package com.library.step_definitions;
 
 import com.library.pages.LoginPage;
+import com.library.utilities.BrowserUtils;
 import com.library.utilities.ConfigurationReader;
 import com.library.utilities.Driver;
 import io.cucumber.java.en.Given;
@@ -12,15 +13,15 @@ public class LoginStepDefinitions {
     LoginPage loginPage= new LoginPage();
 
     @Given("user is on the login page")
-    public void user_is_on_the_login_page() throws InterruptedException {
+    public void user_is_on_the_login_page()  {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
-        Thread.sleep(3000);
+
 
     }
 
     @When("user logs in as a librarian")
-    public void user_logs_in_as_a_librarian() throws InterruptedException {
-        Thread.sleep(3000);
+    public void user_logs_in_as_a_librarian() {
+        BrowserUtils.wait(2);
         loginPage.login();
 
     }
@@ -29,8 +30,10 @@ public class LoginStepDefinitions {
 
         String actualTitle=Driver.getDriver().getTitle();
 
-        Assert.assertTrue("Verification Failed",actualTitle.equalsIgnoreCase("Login - Library"));
-        Driver.getDriver().close();
+        Assert.assertEquals("Login - Library",actualTitle);
+       // Driver.getDriver().close();
+        BrowserUtils.wait(2);
+        loginPage.logout();
 
 
     }
